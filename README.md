@@ -75,7 +75,7 @@ requirements.txt         Dependências da aplicação
 - [Casos de uso](docs/casos-de-uso.svg)
 - [DER](docs/der.svg)
 
-O conteúdo do PDF é editável em `docs/build_documentation.py`. Para regenerar, instale `reportlab` e `Pillow` e execute `python docs/build_documentation.py`. Essas duas bibliotecas são necessárias apenas para autoria do PDF.
+O conteúdo do PDF é editável em `docs/build_documentation.py`, e a arte institucional está em `docs/capa-modelo.pdf`. Para regenerar, instale `reportlab`, `Pillow` e `pypdf` e execute `python docs/build_documentation.py`. Essas bibliotecas são necessárias apenas para autoria do PDF.
 
 ## Regras e limites
 
