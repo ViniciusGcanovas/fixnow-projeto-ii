@@ -2,7 +2,10 @@
 Dependência de autoria: pip install reportlab
 """
 from pathlib import Path
+from io import BytesIO
 from xml.sax.saxutils import escape
+from pypdf import PdfReader, PdfWriter
+from pypdf.generic import ContentStream, NameObject
 from reportlab.pdfgen import canvas
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle, Image
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -91,6 +94,42 @@ def page_header(canvas,doc):
     canvas.restoreState()
 
 
+def apply_cover(pdf):
+    """Preserva a arte da capa enviada pelo aluno e atualiza sua identificação."""
+    cover = PdfWriter()
+    cover.add_page(PdfReader(str(HERE/'capa-modelo.pdf')).pages[0])
+    content = ContentStream(cover.pages[0].get_contents(), cover)
+    content.operations = [(args, op) for args, op in content.operations
+                          if op not in (b'Tj', b'TJ', b"'", b'"')]
+    cover.pages[0][NameObject('/Contents')] = content
+    layer = BytesIO()
+    c = canvas.Canvas(layer, pagesize=(596,842))
+    c.setFillColor(colors.black)
+    c.setFont('Helvetica',10)
+    c.drawCentredString(311.8,613,'VINICIUS GUILHERME CANOVAS')
+    c.setFont('Helvetica-Bold',18)
+    c.drawCentredString(311.8,370,'FIXNOW')
+    c.setFont('Helvetica',12)
+    c.drawCentredString(311.8,347,'Sistema de gerenciamento de chamados técnicos')
+    c.setFont('Helvetica',10)
+    c.drawCentredString(311.8,326,'Projeto de Desenvolvimento de Software II')
+    c.setFont('Helvetica',12)
+    c.drawCentredString(311.8,97,'Londrina')
+    c.drawCentredString(311.8,76,'2026')
+    c.save()
+    layer.seek(0)
+    cover.pages[0].merge_page(PdfReader(layer).pages[0])
+    original = PdfReader(BytesIO(pdf.read_bytes()))
+    result = PdfWriter()
+    result.add_page(cover.pages[0])
+    for page in original.pages[1:]:
+        result.add_page(page)
+    result.add_metadata({'/Title':'FIXNOW - Projeto de Desenvolvimento de Software II',
+                         '/Author':'Vinicius Guilherme Canovas'})
+    with pdf.open('wb') as target:
+        result.write(target)
+
+
 def build():
     story=[]
     def title(s): story.append(Paragraph(s,styles['TitleBR']))
@@ -99,11 +138,11 @@ def build():
     def new(): story.append(PageBreak())
     def tab(rows,widths): story.append(table(rows,widths))
 
-    story += [Spacer(1,48),Paragraph('CENTRO UNIVERSITÁRIO FILADÉLFIA - UNIFIL',styles['CenterBR']),Paragraph('BACHARELADO EM ENGENHARIA DE SOFTWARE',styles['CenterBR']),Spacer(1,70),Paragraph('VINICIUS GUILHERME CANOVAS',styles['CenterBR']),Spacer(1,70),Paragraph('FIXNOW',ParagraphStyle('CoverTitle',parent=styles['CenterBR'],fontName='Helvetica-Bold',fontSize=32,leading=38,textColor=GREEN)),Paragraph('Sistema de gerenciamento de chamados técnicos',styles['CenterBR']),Spacer(1,50),Paragraph('Projeto de Desenvolvimento de Software II<br/>Trabalho individual<br/>Professor/tutor: Fernando Nakagawa',styles['CenterBR']),Spacer(1,70),Paragraph('2026',styles['CenterBR'])]
+    # Reserva a primeira página, substituída pela capa institucional ao finalizar.
+    story.append(Spacer(1,1))
     new(); title('Sumário')
     contents=[('1. Introdução',3),('2. Requisitos funcionais',4),('3. Requisitos não funcionais e regras',5),('4. Diagrama de casos de uso',6),('5. Especificação dos casos de uso',7),('6. Diagrama entidade-relacionamento',8),('7. Dicionário de dados',9),('8. Implementação e execução',10),('9. Evidências da interface',11),('10. Validação e resultados',12),('11. Conclusão',13),('Referências',14)]
     tab([['SEÇÃO','PÁGINA'],*contents],[430,55])
-    body('Documento da implementação acadêmica simplificada, versão 1.0. O escopo desta entrega é independente do projeto anterior em Laravel. Os diagramas correspondem ao esquema e às funcionalidades desta versão em Python.')
     new();title('1. Introdução')
     body('O acompanhamento de atendimentos técnicos exige organizar informações de clientes, responsáveis e problemas relatados. Quando esses registros ficam dispersos, torna-se mais difícil localizar uma solicitação e identificar seu estado atual. O FIXNOW foi desenvolvido como uma aplicação web local para centralizar esses registros em uma interface simples.')
     sub('1.1 Objetivo geral')
@@ -191,6 +230,7 @@ def build():
     pdf=HERE/'Documentacao_FIXNOW.pdf'
     doc=SimpleDocTemplate(str(pdf),pagesize=(595.28,841.89),rightMargin=52,leftMargin=52,topMargin=65,bottomMargin=53,title='FIXNOW - Projeto de Desenvolvimento de Software II',author='Vinicius Guilherme Canovas')
     doc.build(story,onFirstPage=page_header,onLaterPages=page_header)
+    apply_cover(pdf)
     renderSVG.drawToFile(usecases(),str(HERE/'casos-de-uso.svg'))
     renderSVG.drawToFile(er(),str(HERE/'der.svg'))
     print(pdf)
