@@ -74,7 +74,6 @@ requirements.txt         Dependências da aplicação
 - [Documento acadêmico em PDF](docs/Documentacao_FIXNOW.pdf)
 - [Casos de uso](docs/casos-de-uso.svg)
 - [DER](docs/der.svg)
-- [Guia de entrega](ENTREGA.md)
 
 O conteúdo do PDF é editável em `docs/build_documentation.py`. Para regenerar, instale `reportlab` e `Pillow` e execute `python docs/build_documentation.py`. Essas duas bibliotecas são necessárias apenas para autoria do PDF.
 
