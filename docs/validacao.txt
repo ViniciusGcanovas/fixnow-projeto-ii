@@ -1,0 +1,17 @@
+test_clients_and_technicians_complete_crud (test_app.FixnowTests.test_clients_and_technicians_complete_crud) ... ok
+test_csrf_and_delete_methods (test_app.FixnowTests.test_csrf_and_delete_methods) ... ok
+test_dashboard_and_empty_screens (test_app.FixnowTests.test_dashboard_and_empty_screens) ... ok
+test_demo_is_non_destructive (test_app.FixnowTests.test_demo_is_non_destructive) ... ok
+test_filters_combined_and_empty_results (test_app.FixnowTests.test_filters_combined_and_empty_results) ... ok
+test_html_escaped_and_sql_parameters (test_app.FixnowTests.test_html_escaped_and_sql_parameters) ... ok
+test_missing_records_and_unknown_entities (test_app.FixnowTests.test_missing_records_and_unknown_entities) ... ok
+test_persistence_after_reopening_application (test_app.FixnowTests.test_persistence_after_reopening_application) ... ok
+test_referenced_parents_cannot_be_deleted (test_app.FixnowTests.test_referenced_parents_cannot_be_deleted) ... ok
+test_required_fields_email_and_limits (test_app.FixnowTests.test_required_fields_email_and_limits) ... ok
+test_ticket_rejects_invalid_links_states_and_empty_fields (test_app.FixnowTests.test_ticket_rejects_invalid_links_states_and_empty_fields) ... ok
+test_tickets_complete_crud_and_states (test_app.FixnowTests.test_tickets_complete_crud_and_states) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.999s
+
+OK

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="480" height="360" preserveAspectRatio="xMinYMin meet" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="480" height="360"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-360)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="142" y="12" width="328" height="335" rx="8" ry="0" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="219.636" y="324" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,648) scale(1,-1)">FIXNOW - Gestão de chamados</text>
+			<circle cx="58" cy="199" r="13" style="stroke: rgb(9%,16%,20%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 58,186 L 58,135 Z" style="stroke: rgb(9%,16%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 28,169 L 88,169 Z" style="stroke: rgb(9%,16%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 58,135 L 32,100 Z" style="stroke: rgb(9%,16%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 58,135 L 84,100 Z" style="stroke: rgb(9%,16%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="34.768" y="77" style="font-family: Helvetica; font-size: 11px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,154) scale(1,-1)">Operador</text>
+			<path d="M 91,169 L 195,282 Z" style="stroke: rgb(40%,47%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<ellipse cx="323.0" cy="282.0" rx="126.0" ry="20.0" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="265.485" y="279" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,558) scale(1,-1)">UC01 - Gerenciar clientes</text>
+			<path d="M 91,169 L 195,227 Z" style="stroke: rgb(40%,47%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<ellipse cx="323.0" cy="227.0" rx="126.0" ry="20.0" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="264.095" y="224" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,448) scale(1,-1)">UC02 - Gerenciar técnicos</text>
+			<path d="M 91,169 L 195,172 Z" style="stroke: rgb(40%,47%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<ellipse cx="323.0" cy="172.0" rx="126.0" ry="20.0" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="273.265" y="169" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,338) scale(1,-1)">UC03 - Abrir chamado</text>
+			<path d="M 91,169 L 195,117 Z" style="stroke: rgb(40%,47%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<ellipse cx="323.0" cy="117.0" rx="126.0" ry="20.0" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="264.37" y="114" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,228) scale(1,-1)">UC04 - Atualizar chamado</text>
+			<path d="M 91,169 L 195,62 Z" style="stroke: rgb(40%,47%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<ellipse cx="323.0" cy="62.0" rx="126.0" ry="20.0" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="259.925" y="59" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,118) scale(1,-1)">UC05 - Consultar chamados</text>
+		</g>
+	</g>
+</svg>

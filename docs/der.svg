@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="480" height="370" preserveAspectRatio="xMinYMin meet" viewBox="0 0 480 370" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="480" height="370"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-370)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="2" y="234" width="190" height="116" rx="5" ry="0" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="2" y="320" width="190" height="30" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="73.7735" y="330" style="font-family: Helvetica; font-size: 11px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,660) scale(1,-1)">CLIENTE</text>
+			<text x="12" y="302" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,604) scale(1,-1)">PK  id : INTEGER</text>
+			<text x="12" y="281" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,562) scale(1,-1)">nome : TEXT(100)</text>
+			<text x="12" y="260" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,520) scale(1,-1)">email : TEXT(150)</text>
+			<text x="12" y="239" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,478) scale(1,-1)">telefone : TEXT(30)</text>
+			<rect x="288" y="234" width="190" height="116" rx="5" ry="0" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="288" y="320" width="190" height="30" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="358.25" y="330" style="font-family: Helvetica; font-size: 11px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,660) scale(1,-1)">TÉCNICO</text>
+			<text x="298" y="302" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,604) scale(1,-1)">PK  id : INTEGER</text>
+			<text x="298" y="281" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,562) scale(1,-1)">nome : TEXT(100)</text>
+			<text x="298" y="260" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,520) scale(1,-1)">email : TEXT(150)</text>
+			<text x="298" y="239" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,478) scale(1,-1)">especialidade : TEXT(100)</text>
+			<rect x="129" y="-5" width="222" height="200" rx="5" ry="0" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="129" y="165" width="222" height="30" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="211.8895" y="175" style="font-family: Helvetica; font-size: 11px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,350) scale(1,-1)">CHAMADO</text>
+			<text x="139" y="147" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,294) scale(1,-1)">PK  id : INTEGER</text>
+			<text x="139" y="126" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,252) scale(1,-1)">FK  cliente_id : INTEGER</text>
+			<text x="139" y="105" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,210) scale(1,-1)">FK  tecnico_id : INTEGER</text>
+			<text x="139" y="84" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,168) scale(1,-1)">titulo : TEXT(150)</text>
+			<text x="139" y="63" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,126) scale(1,-1)">descricao : TEXT(3000)</text>
+			<text x="139" y="42" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,84) scale(1,-1)">status : TEXT</text>
+			<text x="139" y="21" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,42) scale(1,-1)">criado_em : TEXT (UTC)</text>
+			<text x="139" y="0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,0) scale(1,-1)">atualizado_em : TEXT (UTC)</text>
+			<path d="M 97,234 L 97,215 Z" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 97,215 L 176,215 Z" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 176,215 L 176,195 Z" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="82" y="218" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,436) scale(1,-1)">1</text>
+			<text x="181" y="199" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,398) scale(1,-1)">0..N</text>
+			<path d="M 383,234 L 383,215 Z" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 383,215 L 304,215 Z" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 304,215 L 304,195 Z" style="stroke: rgb(3%,49%,43%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="368" y="218" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,436) scale(1,-1)">1</text>
+			<text x="309" y="199" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,20%); stroke:none;" transform="translate(0,398) scale(1,-1)">0..N</text>
+		</g>
+	</g>
+</svg>
