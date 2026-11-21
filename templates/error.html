@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section class="panel form-panel"><h2>{{ 'Página não encontrada' if error.code==404 else 'Não foi possível concluir a solicitação' }}</h2><p>{{ 'O registro ou endereço solicitado não existe.' if error.code==404 else error.description }}</p><a class="button" href="{{ url_for('dashboard') }}">Voltar ao início</a></section>{% endblock %}
